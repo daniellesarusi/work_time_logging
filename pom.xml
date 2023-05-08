@@ -10,4 +10,29 @@
         <version>2.6.3</version>
     </dependency>
 </dependencies>
+<build>
+    <plugins>
+      <!-- Use the Spring Boot plugin to create an executable JAR -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.6.3</version>
+        <configuration>
+          <!-- Set the main class -->
+          <mainClass>work_time_logging.Application</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+<properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+</properties>
 </project>
